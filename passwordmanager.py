@@ -17,3 +17,19 @@ def save_user(user):
 
 
 
+def verify_user(first_name,password):
+	'''
+	this allows to to clarify users before they enter information
+	'''
+	checking_user = Credential.check_user(first_name,password)
+	return checking_user
+
+def generate_password():
+	'''
+	
+	'''
+	gen_pass = Credential.generate_password()
+	return gen_pass
+
+
+
