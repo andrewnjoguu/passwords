@@ -22,7 +22,7 @@ A user is able to:
 * python3.8
 * pip
 * pyperclip
-* xclip
+
 
 ### Cloning
 * In your terminal:
@@ -35,7 +35,8 @@ A user is able to:
 
         $ chmod +x passwordmanager.py
         $ ./passwordmanager.py
-        
+        or
+        $pythonversion passwordmanager.py
 ## Testing the Application
 * To run the tests for the class file:
 
