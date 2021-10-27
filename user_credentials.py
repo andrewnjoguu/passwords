@@ -46,10 +46,10 @@ class Credential:
 
 	def __init__(self,user_name,site_name,account_name,password):
 		'''
-		Method to define the properties for each user object will hold.
+		defines users properties
 		'''
 
-		# instance variables
+	
 		self.user_name = user_name
 		self.site_name = site_name
 		self.account_name = account_name
@@ -59,12 +59,12 @@ class Credential:
 		'''
 		Function to save a newly created user instance
 		'''
-		# global users_list
+	
 		Credential.credentials_list.append(self)
 	
 	def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
 		'''
-		Function to generate an 8 character password for a credential
+	function that shows passwords
 		'''
 		gen_pass=''.join(random.choice(char) for _ in range(size))
 		return gen_pass
@@ -72,7 +72,7 @@ class Credential:
 	@classmethod
 	def display_credentials(cls,user_name):
 		'''
-		Class method to display the list of credentials saved
+		displayed all listed info
 		'''
 		user_credentials_list = []
 		for credential in cls.credentials_list:
@@ -85,7 +85,7 @@ class Credential:
 	@classmethod
 	def find_by_site_name(cls, site_name):
 		'''
-		Method that takes in a site_name and returns a credential that matches that site_name.
+		finds the system name
 		'''
 		for credential in cls.credentials_list:
 			if credential.site_name == site_name:
@@ -94,7 +94,7 @@ class Credential:
 	@classmethod
 	def copy_credential(cls,site_name):
 		'''
-		Class method that copies a credential's info after the credential's site name is entered
+		copies info entered
 		'''
 		find_credential = Credential.find_by_site_name(site_name)
 		return pyperclip.copy(find_credential.password)
