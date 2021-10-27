@@ -37,10 +37,7 @@ A user is able to:
         $ ./passwordmanager.py
         or
         $pythonversion passwordmanager.py
-## Testing the Application
-* To run the tests for the class file:
 
-        $ python3.8 user_credentials_test.py
         
 ## Technologies Used
 * Python3.8
